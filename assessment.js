@@ -112,20 +112,10 @@ function removeItem(array,str) {
 // #11 Write a function  called doubleTheFun that takes 1 parameter.
 // It should double numbers, and
 // repeats strings. example 4->8, 2.5->5, 'Awesome'->'AwesomeAwesome'
-function doubleTheFun(param) {
-  var str = param;
-  var isNum = parseInt(param);
-
-  var isString = typeof param === 'string';
-  var isAnum = typeof param === 'number';
-	if(typeof isNum === 'number'&& !isString) {
-		return isNum*=2;
-	}
-	if(isString && !isAnum){
-   return str+=str;
-	}
+function doubleTheFun(num) {
+	if(typeof num =='number')return num*2;
+	else return num+=num;
 }
- console.log(doubleTheFun('sdf'));
 
 // #12 Write function getValueOfProperty that takes in an object, and the name of a property on the object
 // return the value from the object that corresponds to the property
